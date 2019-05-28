@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "report": "node create-html-report.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^74.0.0",
+    "cucumber-html-reporter": "^5.0.0",
     "nightwatch": "^1.1.11"
+  },
+  "dependencies": {
+    "nightwatch-html-reporter": "^2.0.6"
   }
 }
