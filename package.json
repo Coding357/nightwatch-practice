@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "report": "node create-html-report.js"
+    "report": "node create-html-report.js",
+    "test:cucumber": "nightwatch cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "keywords": [],
   "author": "",

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="1"
+<testsuites errors="10"
+            failures="0"
             tests="1">
 
   <testsuite name="firstTest"
-    errors="1" failures="1" hostname="" id="" package="firstTest" skipped="0"
-    tests="1" time="12.73" timestamp="">
+    errors="10" failures="0" hostname="" id="" package="firstTest" skipped="0"
+    tests="1" time="55.04" timestamp="">
   
-    <testcase name="First test case" classname="firstTest" time="12.73" assertions="1">  <failure message="Testing if element &lt;Element [name=@language]&gt; contains text: &#34;Basque&#34;. Element could not be located in 1000 ms. - expected [0;32m&#34;Basque&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.First test case (C:\Users\Milos.Ristic\Documents\Me\Automation practice\nightwatch-practice\tests\firstTest.js:43:21)</failure>
-
-    
+    <testcase name="First test case" classname="firstTest" time="55.04" assertions="0">
     </testcase>
   
 
