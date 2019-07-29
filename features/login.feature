@@ -5,7 +5,8 @@ Feature: Login page
 Scenario: Login into account
 
   Given I open login page
-  And I enter email
+  When I enter email
   And I enter password
-  Then I click login button
+  And I click login button
+  Then I should be on the home page
   

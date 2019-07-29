@@ -1,34 +1,44 @@
 //Step definition for Login
 
 const { browser } = require('nightwatch-api');
-const { Given, And, Then} = require('cucumber');
+const { Given, When, And, Then} = require('cucumber');
 const emailValue = 'global.admin@soprex.com';   
 const passValue = 'First132.';
-const loginPage = browser.Login()
+const loginPage = browser.page.Login()
+
+console.log(loginPage)
 
 Given(/^I open login page page$/, () => {
+    const loginPage = browser.page.Login()
     return loginPage
         .navigate()
         .waitForElementVisible('body', 1000);
 });
 
-And(/^I enter email$/, () => {
+When(/^I enter email$/, () => {
+    const loginPage = browser.page.Login()
     return loginPage
         .setValue('@emailSelector', emailValue);
 });
 
 
 And(/^I enter password$/, () => {
+    const loginPage = browser.page.Login()
     return loginPage
         .setValue('@passSelector', passValue);
 });
 
 
-Then(/^I click login button$/, () => {
-  return loginPage
-    .login()
-     .pause(2000);
-
+And(/^I click login button$/, () => {
+    const loginPage = browser.page.Login()
+    return loginPage
+        .login()
+        .pause(2000);
+});
+Then(/^I should be on the home page$/, () => {
+    return browser
+        .assert.urlContains('home')
+        .pause(2000);
 });
 
 

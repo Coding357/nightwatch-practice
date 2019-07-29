@@ -21,6 +21,7 @@ module.exports = {
         ModalWindow
             .LanguageName()
             .LanguageStatus()
+            .pause(2000)
             .LanguageOwner()
             .pause(2000)
             .SaveButton()

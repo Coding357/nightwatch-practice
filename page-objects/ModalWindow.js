@@ -3,7 +3,7 @@ module.exports = {
     elements: {
         languageNameDropDown: {
             selector: '.col-md-5:nth-child(1) div:nth-child(2) .ui-autocomplete-dropdown'
-        },
+        },    
         language: {
             selector: '//li[contains(.,"Basque")]',
             locateStrategy: 'xpath'
@@ -18,7 +18,7 @@ module.exports = {
             selector: '.row:nth-child(4) .ng-untouched .ui-autocomplete-dropdown'
         },
         languageOwner: {
-            selector: '.ui-autocomplete-list-item:nth-child(15)'
+            selector: '.ui-autocomplete-list-item:nth-child(1)'
         },
         saveButton: {
             selector: '//button[contains(.,"Save")]',
@@ -40,6 +40,7 @@ module.exports = {
         LanguageOwner() {
             return this
                 .click('@languageOwnerDropDown')
+                .pause(1000)
                 .click('@languageOwner')
         },
         SaveButton() {
